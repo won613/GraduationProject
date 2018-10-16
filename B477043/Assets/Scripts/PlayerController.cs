@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour {
     public float rotationSpeed;
     public Transform relativeTransform;
     public GameObject itemWindow;
-
+    private bool isWindowOpened = false;
 
     // Use this for initialization
     void Start () {
@@ -36,14 +36,21 @@ public class PlayerController : MonoBehaviour {
 
     void LateUpdate()
     {
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButtonDown(1))
         {
-            itemWindow.SetActive(true);
+            if (isWindowOpened == false)
+            {
+                itemWindow.SetActive(true);
+                isWindowOpened = true;
+            }
+            else
+            {
+                itemWindow.SetActive(false);
+                isWindowOpened = false;
+            }
+                
         }
-        else if (Input.GetMouseButtonUp(1))
-        {
-            itemWindow.SetActive(false);
-        }
+        
 
     }
 
