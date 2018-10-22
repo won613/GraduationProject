@@ -15,8 +15,5 @@ public class ItemWindowController : MonoBehaviour {
 		
 	}
 
-    void OnEnable()
-    {
-        this.transform.position = Input.mousePosition;
-    }
+    
 }
