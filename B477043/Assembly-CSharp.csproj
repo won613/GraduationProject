@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\CharacterAnimator.cs" />
      <Compile Include="Assets\Scripts\ItemButton.cs" />
      <Compile Include="Assets\Scripts\ItemController.cs" />
+     <Compile Include="Assets\Scripts\ItemDropHandler.cs" />
      <Compile Include="Assets\Scripts\ItemWindowController.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
  <Reference Include="UnityEditor.StandardEvents">
