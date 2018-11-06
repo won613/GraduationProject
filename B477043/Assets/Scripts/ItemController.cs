@@ -12,10 +12,7 @@ public class ItemController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButtonUp(1) && EventSystem.current.IsPointerOverGameObject())
-        {
-            Debug.Log("123123123");
-        }
+        
 	}
 
     
