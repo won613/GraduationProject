@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour {
     Vector3 moveDirection;
     public Rigidbody rb;
     public Vector3 cameraPos;
-    private Vector3 lookingVector;
+    [SerializeField]private Vector3 lookingVector;
     private Vector3 backwardVector;
     private Vector3 leftVector;
     private Vector3 rightVector;
@@ -22,6 +22,13 @@ public class PlayerController : MonoBehaviour {
     public float increaseSpeed;
     private bool isMoveKeyPressing = false;
     private bool isWSKeyPressing = false;
+    public bool haveBow = false;
+    public GameObject holdingBow;
+
+    public GameObject arrow;
+    public GameObject shootPosition;
+    private float shotCooldown = 0;
+    private bool canShot = true;
 
     // Use this for initialization
     void Start () {
@@ -147,6 +154,24 @@ public class PlayerController : MonoBehaviour {
         //    transform.rotation = Quaternion.LookRotation(moveDirection);
         //transform.LookAt(moveDirection);
 
+        shotCooldown--;
+
+        if (shotCooldown < 0)
+            canShot = true;
+        else
+            canShot = false;
+
+        if (haveBow)
+            holdingBow.SetActive(true);
+
+        if (Input.GetKey(KeyCode.Space) && haveBow && canShot)
+        {
+            ShootArrow();
+            canShot = false;
+            
+        }
+            
+
 
     }
 
@@ -169,6 +194,17 @@ public class PlayerController : MonoBehaviour {
         }
         
 
+    }
+
+    void ShootArrow()
+    {        
+        var arrowClone = (GameObject)Instantiate(arrow, shootPosition.transform.position, transform.rotation);
+        Vector3 vec = transform.rotation.eulerAngles;
+        vec.y += 90;        
+        arrowClone.transform.rotation = Quaternion.Euler(vec);
+        arrowClone.GetComponent<Rigidbody>().velocity = transform.forward * 9;
+        shotCooldown = 20f;
+        
     }
 
 

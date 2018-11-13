@@ -188,7 +188,7 @@ public class ItemButton : MonoBehaviour, IDragHandler, IEndDragHandler {
 
     void WoodPlankOnClick()
     {
-
+        Instantiate(obj_woodPlank);
     }
 
     void WeightOnClick()
