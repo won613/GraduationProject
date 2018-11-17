@@ -113,6 +113,34 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 89198f401f992d54b8fe221547a533b8, type: 2}
+--- !u!1 &14342409
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 14342410}
+  m_Layer: 0
+  m_Name: ItemSpawnPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &14342410
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 14342409}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.566, z: 1.622}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 769329992}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &110820592
 GameObject:
   m_ObjectHideFlags: 0
@@ -1483,6 +1511,7 @@ Transform:
   - {fileID: 711249151}
   - {fileID: 1160338353}
   - {fileID: 492038228}
+  - {fileID: 14342410}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1496,8 +1525,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.42, z: 1}
-  m_Center: {x: 0, y: 0.67003226, z: 0}
+  m_Size: {x: 0.61730236, y: 1.8132298, z: 1}
+  m_Center: {x: 0.013045877, y: 0.8666471, z: 0}
 --- !u!114 &769329994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1518,7 +1547,6 @@ MonoBehaviour:
     m_Bits: 512
   rb: {fileID: 769329988}
   cameraPos: {x: 0, y: 0, z: 0}
-  lookingVector: {x: 0, y: 0, z: 0}
   maxSpeed: 5
   increaseSpeed: 0.2
   haveBow: 0
@@ -3109,8 +3137,6 @@ GameObject:
   - component: {fileID: 1657484127}
   - component: {fileID: 1657484129}
   - component: {fileID: 1657484128}
-  - component: {fileID: 1657484130}
-  - component: {fileID: 1657484131}
   - component: {fileID: 1657484132}
   m_Layer: 5
   m_Name: Window
@@ -3189,28 +3215,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1657484126}
   m_CullTransparentMesh: 0
---- !u!114 &1657484130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1657484126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd9c3738234f940489c1eee751f017cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1657484131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1657484126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91497b3e11f99354ea750ed1a28b6011, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1657484132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3223,6 +3227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reset: {fileID: 1042400261}
+  itemSpawnPosition: {fileID: 14342409}
   wood: {fileID: 1027362933}
   stone: {fileID: 516311577}
   rope: {fileID: 284120059}

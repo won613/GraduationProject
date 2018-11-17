@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 public class ItemButton : MonoBehaviour, IDragHandler, IEndDragHandler {
 
     public GameObject reset;
+    public GameObject itemSpawnPosition;
 
     public Button wood;
     public Button stone;
@@ -183,12 +184,12 @@ public class ItemButton : MonoBehaviour, IDragHandler, IEndDragHandler {
 
     void BowOnClick()
     {
-        Instantiate(obj_bow);
+        Instantiate(obj_bow, itemSpawnPosition.transform.position, transform.rotation);
     }
 
     void WoodPlankOnClick()
     {
-        Instantiate(obj_woodPlank);
+        Instantiate(obj_woodPlank, itemSpawnPosition.transform.position, transform.rotation);
     }
 
     void WeightOnClick()

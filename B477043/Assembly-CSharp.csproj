@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\ItemDropHandler.cs" />
      <Compile Include="Assets\Scripts\ItemWindowController.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\WoodPlankDrag.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/Heto/Documents/GraduationProject/B477043/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

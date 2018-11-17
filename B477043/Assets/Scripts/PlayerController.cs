@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour {
     Vector3 moveDirection;
     public Rigidbody rb;
     public Vector3 cameraPos;
-    [SerializeField]private Vector3 lookingVector;
+    private Vector3 lookingVector;
     private Vector3 backwardVector;
     private Vector3 leftVector;
     private Vector3 rightVector;
